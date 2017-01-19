@@ -18,8 +18,8 @@ compinit
 PROMPT='%F{cyan}[%~]$%f '
 
 # plugin paths
-if [ -d $HOME/plugins ]; then
-  for plugins_path in $HOME/plugins/*/bin; do
+if [ -d $HOME/.config/plugins ]; then
+  for plugins_path in $HOME/.config/plugins/*/bin; do
     if [ -d $plugins_path ]; then
       PATH=$PATH:$plugins_path
     fi

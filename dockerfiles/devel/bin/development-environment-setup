@@ -53,7 +53,7 @@ development_environment_setup_plugins(){
   local dir
   local repo
 
-  dir=$root/plugins
+  dir=$root/.config/plugins
   mkdir -p $dir
 
   local -a repos=(
