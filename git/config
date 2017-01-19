@@ -1,0 +1,37 @@
+[color]
+  ui = auto
+[merge]
+  tool = vimdiff
+[alias]
+  a = add -A
+
+  ci = commit -v
+  ci-empty = commit -v --allow-empty
+  ci-init = !git ci-empty -m 'initial commit'
+
+  co = checkout
+  m = checkout master
+
+  br = branch
+  current = symbolic-ref --short HEAD
+
+  tmp = stash save -u
+
+  up = "!git remote update --prune && git fetch --tags --prune && git m && git pull"
+
+  re = readme
+
+  user-fix9 = "!git config --local user.name shun && git config --local user.email shun.fix9@gmail.com"
+  user-getto = "!git config --local user.name shun && git config --local user.email shun@getto.systems"
+
+  reg-pub-fix9 = reg-pub github:shun-fix9 bitbucket:shun-fix9
+  reg-pub-getto = reg-pub github:shun-getto-systems bitbucket:shun-getto-systems
+
+  setup-fix9 = "!git user-fix9 && git reg-pub-fix9"
+  setup-getto = "!git user-getto && git reg-pub-getto"
+[push]
+  default = current
+[user]
+  useConfigOnly = true
+[credential]
+  helper = store --file=/home/shun/.git-post/credentials
