@@ -60,3 +60,6 @@ alias a='git add -A'
 alias ci='git commit -m'
 alias br='git branch-and-post'
 alias p='git pub'
+
+bindkey "^P" up-line-or-search
+bindkey "^N" down-line-or-search
