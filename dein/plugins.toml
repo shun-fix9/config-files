@@ -25,3 +25,6 @@ colorscheme railscasts
 
 [[plugins]]
 repo = 'kassio/neoterm'
+
+[[plugins]]
+repo = 'raichoo/purescript-vim'
