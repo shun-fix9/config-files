@@ -28,3 +28,9 @@ repo = 'kassio/neoterm'
 
 [[plugins]]
 repo = 'raichoo/purescript-vim'
+
+[[plugins]]
+repo = 'elixir-lang/vim-elixir'
+
+[[plugins]]
+repo = 'lambdatoast/elm.vim'

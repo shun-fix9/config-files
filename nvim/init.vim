@@ -17,10 +17,6 @@ endif
 filetype plugin indent on
 syntax enable
 
-if dein#check_install()
-  call dein#install()
-endif
-
 set backspace=indent,start,eol
 
 set encoding=utf-8
@@ -76,6 +72,7 @@ let g:netrw_browse_split = 1
 map ,s :w<CR>
 map ,q :q<CR>
 map ,w :x<CR>
+map ,u :call dein#install()<CR>
 
 map <C-J> <C-W>j
 map <C-K> <C-W>k
