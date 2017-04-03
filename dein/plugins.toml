@@ -8,14 +8,8 @@ repo = 'tpope/vim-fugitive'
 repo = 'tpope/vim-endwise'
 
 [[plugins]]
-repo = 'vim-airline/vim-airline'
+repo = 'itchyny/lightline.vim'
 depends = ['vim-fugitive']
-
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
-hook_add = '''
-let g:airline_theme='base16_railscasts'
-'''
 
 [[plugins]]
 repo = 'vim-scripts/Railscasts-Theme-GUIand256color'
