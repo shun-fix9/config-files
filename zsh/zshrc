@@ -75,7 +75,7 @@ if [ -d $HOME/.config/plugins ]; then
     fi
   done
 fi
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:.birdfirm/bin:$HOME/bin
 
 export DOCKER_HOST=172.17.0.1:2375
 
