@@ -77,20 +77,12 @@ if [ -d $HOME/.plugins ]; then
 fi
 export PATH=$PATH:.birdfirm/bin:$HOME/bin
 
-export DOCKER_HOST=172.17.0.1:2375
-
-if [ -f /etc/docker-env ]; then
-  eval "$(cat /etc/docker-env | grep DOCKER_ | sed 's/^/export /')"
-  if [ -n "$DOCKER_API_VERSION" ]; then
-    export DOCKER_API_VERSION=$DOCKER_API_VERSION
-  fi
-fi
-
 if [ "$(which direnv)" ]; then
   eval "$(direnv hook zsh)"
 fi
 
 export RAILS_DEVEL_NAME=$(basename $HOME)
+export DOCKER_HOST=172.17.0.1:2375
 
 alias vi='nvim'
 
