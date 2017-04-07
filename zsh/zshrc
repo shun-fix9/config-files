@@ -82,18 +82,9 @@ if [ "$(which direnv)" ]; then
 fi
 
 export RAILS_DEVEL_NAME=$(basename $HOME)
-export DOCKER_HOST=172.17.0.1:2375
+
 if [ -f /etc/docker-env ]; then
-  eval "$(cat /etc/docker-env | grep DOCKER_ | sed 's/^/export /')"
-  if [ -n "$DOCKER_API_VERSION" ]; then
-    export DOCKER_API_VERSION=$DOCKER_API_VERSION
-  fi
-  if [ -n "$DOCKER_PORT_PREFIX" ]; then
-    export DOCKER_PORT_PREFIX=$DOCKER_PORT_PREFIX
-  fi
-  if [ -n "$DOCKER_VOLUMES" ]; then
-    export DOCKER_VOLUMES=$DOCKER_VOLUMES
-  fi
+  eval "$(cat /etc/docker-env | sed 's/^/export /')"
 fi
 
 alias vi='nvim'
