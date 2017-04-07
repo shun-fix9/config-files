@@ -75,7 +75,7 @@ if [ -d $HOME/.plugins ]; then
     fi
   done
 fi
-export PATH=$PATH:.birdfirm/bin:$HOME/bin
+export PATH=$PATH:$HOME/bin
 
 if [ "$(which direnv)" ]; then
   eval "$(direnv hook zsh)"
