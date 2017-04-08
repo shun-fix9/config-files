@@ -36,7 +36,7 @@ fi
 # direnv workaround
 chmod a+x ~/.zplug/repos/direnv/direnv/*
 
-zplug load --verbose
+zplug load
 
 if [ "$(which direnv)" ]; then
   eval "$(direnv hook zsh)"
