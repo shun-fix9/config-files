@@ -1,8 +1,14 @@
+. ~/.config/zsh/zplug.sh
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
+
 bindkey -v
+bindkey "^P" up-line-or-search
+bindkey "^N" down-line-or-search
+
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/shun/.zshrc'
@@ -67,26 +73,15 @@ setopt always_last_prompt  # 無駄なスクロールを避ける
 
 PROMPT='%F{cyan}[%~]$%f '
 
-# plugin paths
-if [ -d $HOME/.plugins ]; then
-  for plugins_path in $HOME/.plugins/*/bin; do
-    if [ -d $plugins_path ]; then
-      PATH=$PATH:$plugins_path
-    fi
-  done
-fi
-export PATH=$PATH:$HOME/bin
-
-if [ "$(which direnv)" ]; then
-  eval "$(direnv hook zsh)"
-fi
-
-export RAILS_DEVEL_NAME=$(basename $HOME)
-
 if [ -f /etc/docker-env ]; then
   eval "$(cat /etc/docker-env | sed 's/^/export /')"
 fi
 
+export PATH=$PATH:$HOME/bin
+export RAILS_DEVEL_NAME=$(basename $HOME)
+
+
+# alias
 alias vi='nvim'
 
 alias rm='rm -i'
@@ -105,6 +100,3 @@ alias a='git add -A'
 alias ci='git commit -m'
 alias br='git branch-and-post'
 alias p='git pub'
-
-bindkey "^P" up-line-or-search
-bindkey "^N" down-line-or-search
