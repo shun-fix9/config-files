@@ -1,0 +1,35 @@
+#!/bin/bash
+
+config_rc_main(){
+  config_rc_set_links
+  config_rc_set_ssh_config
+}
+config_rc_set_links(){
+  cd $HOME
+  config_rc_link .config/ag/ignore .agignore
+  config_rc_link .config/git/config .gitconfig
+  config_rc_link .config/tmux/config .tmux.conf
+  config_rc_link .config/zsh/zshrc .zshrc
+}
+config_rc_link(){
+  if [ ! -L $2 ]; then
+    echo "ln -s $1 $2"
+    ln -s $1 $2
+  fi
+}
+config_rc_set_ssh_config(){
+  local config
+  config=$HOME/.ssh/conf.d/local.conf
+
+  if [ ! -f $config ]; then
+    echo "create $config"
+    config_rc_ssh_config "Host $LABO_LOCAL_IP"
+    config_rc_ssh_config "  StrictHostKeyChecking no"
+    config_rc_ssh_config "  UserKnownHostsFile=/dev/null"
+  fi
+}
+config_rc_ssh_config(){
+  echo $1 >> $config
+}
+
+config_rc_main
