@@ -75,13 +75,14 @@ set foldmethod=manual
 set foldlevel=10000
 set foldnestmax=1
 
+set hidden
+
 let loaded_matchparen = 1
 let g:netrw_browse_split = 1
 
 map ,s :w<CR>
 map ,q :q<CR>
 map ,w :x<CR>
-map ,u :call dein#install()<CR>
 
 map <C-J> <C-W>j
 map <C-K> <C-W>k
