@@ -2,6 +2,36 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+depends = ['neomru.vim', 'neoyank.vim']
+hook_add = '''
+map ,a :Denite file_rec -mode=normal<CR>
+map ,b :Denite buffer -mode=normal<CR>
+map ,f :DeniteBufferDir file_rec -mode=normal<CR>
+map ,z :Denite file_mru -mode=normal<CR>
+map ,v :Denite neoyank -mode=normal<CR>
+map q: :Denite command_history -mode=normal<CR>
+map L :DeniteCursorWord line -mode=normal<CR>
+map K :DeniteCursorWord grep -mode=normal<CR>
+map <C-w> :Denite -resume<CR>
+map <C-p> :Denite -resume -immediately -select=-1<CR>
+map <C-n> :Denite -resume -immediately -select=+1<CR>
+'''
+hook_post_source = '''
+call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+call denite#custom#var('grep', 'command', ['ag'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', [])
+call denite#custom#var('grep', 'default_opts', ['--follow', '--no-group', '--no-color'])
+'''
+
+[[plugins]]
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
