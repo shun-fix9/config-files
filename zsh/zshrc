@@ -73,6 +73,28 @@ setopt always_last_prompt  # 無駄なスクロールを避ける
 
 PROMPT='%F{cyan}[%~]$%f '
 
+zsh_title_precmd(){
+  local title
+
+  if [ -n "$APP_ROOT" ]; then
+    title=$(basename "$APP_ROOT")
+  else
+    case "$(pwd)" in
+      $HOME*)
+        title=HOME
+        ;;
+      *)
+        title=GLOBAL
+        ;;
+    esac
+  fi
+
+  print -n "\ek$title\e\\"
+}
+
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd zsh_title_precmd
+
 if [ -f /etc/docker-env ]; then
   eval "$(cat /etc/docker-env | sed 's/^/export /')"
 fi
