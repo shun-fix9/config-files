@@ -2,7 +2,12 @@ if &compatible
   set nocompatible
 endif
 
-set runtimepath+=/home/shun/.config/nvim/repos/github.com/Shougo/dein.vim
+let s:dein_repo_dir = '/home/shun/.config/nvim/repos/github.com/Shougo/dein.vim'
+if !isdirectory(s:dein_repo_dir)
+  execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+endif
+
+execute 'set runtimepath^=' . s:dein_repo_dir
 
 if dein#load_state('/home/shun/.config/nvim')
   call dein#begin('/home/shun/.config/nvim')
@@ -12,6 +17,10 @@ if dein#load_state('/home/shun/.config/nvim')
 
   call dein#end()
   call dein#save_state()
+endif
+
+if dein#check_install()
+  call dein#install()
 endif
 
 filetype plugin indent on
