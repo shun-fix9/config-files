@@ -95,8 +95,8 @@ zsh_title_precmd(){
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd zsh_title_precmd
 
-if [ -f /etc/docker-env ]; then
-  eval "$(cat /etc/docker-env | sed 's/^/export /')"
+if [ -f /etc/labo-env ]; then
+  eval "$(cat /etc/labo-env | grep '^\(DOCKER_HOST=\|DOCKER_WRAPPER_\|LABO_\)' | sed 's/^/export /')"
 fi
 
 export PATH=$PATH:$HOME/bin
