@@ -29,7 +29,7 @@ config_rc_set_ssh_config(){
   fi
 }
 config_rc_ssh_config(){
-  echo $1 >> $config
+  echo "$1" >> $config
 }
 
 config_rc_main
