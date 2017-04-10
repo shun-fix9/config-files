@@ -86,8 +86,8 @@ map ,w :x<CR>
 
 map <C-J> <C-W>j
 map <C-K> <C-W>k
-map <C-H> <C-W>h
-map <C-L> <C-W>l
+map <C-H> gT
+map <C-L> gt
 
 map + <C-W>+
 map - <C-W>-

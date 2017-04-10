@@ -1,4 +1,4 @@
-if [ ! -d ~/.zplug ]; then
+if [ ! -f ~/.zplug/init.zsh ]; then
   echo "install zplug"
   curl -sSL zplug.sh/installer | TERM=xterm zsh
 fi
