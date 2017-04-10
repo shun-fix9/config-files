@@ -95,6 +95,8 @@ zsh_title_precmd(){
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd zsh_title_precmd
 
+export LANG=ja_JP.UTF-8
+
 if [ -f /etc/labo-env ]; then
   eval "$(cat /etc/labo-env | grep '^\(DOCKER_HOST=\|DOCKER_WRAPPER_\|LABO_\)' | sed 's/^/export /')"
 fi
