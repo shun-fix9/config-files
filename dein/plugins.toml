@@ -19,7 +19,7 @@ map ,v :Denite neoyank -mode=normal<CR>
 map q: :Denite command_history -mode=normal<CR>
 map L :DeniteCursorWord line -mode=normal<CR>
 map K :DeniteCursorWord grep -mode=normal<CR>
-map <C-w> :Denite -resume<CR>
+map <C-l> :Denite -resume<CR>
 map <C-p> :Denite -resume -immediately -select=-1<CR>
 map <C-n> :Denite -resume -immediately -select=+1<CR>
 '''
