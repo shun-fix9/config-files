@@ -19,6 +19,7 @@ zplug "sanzen-sekai/git-sub-status", as:command, use:"bin/*"
 zplug "sanzen-sekai/git-pub", as:command, use:"bin/*"
 zplug "sanzen-sekai/git-post", as:command, use:"bin/*"
 zplug "sanzen-sekai/git-branch-and-post", as:command, use:"bin/*"
+zplug "getto-systems/git-release-request", as:command, use:"bin/*"
 zplug "getto-systems/birdfirm", as:command, use:"bin/*"
 zplug "getto-systems/docker-wrapper", as:command, use:"bin/*"
 
