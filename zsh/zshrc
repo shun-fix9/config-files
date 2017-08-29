@@ -1,7 +1,11 @@
 . ~/.config/zsh/zplug.sh
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+if [ -z "$DOCKER_WRAPPER_SERVER_HOSTNAME" ]; then
+  HISTFILE=~/.histfile
+else
+  HISTFILE=~/.histfiles/$DOCKER_WRAPPER_SERVER_HOSTNAME
+fi
 HISTSIZE=10000
 SAVEHIST=10000
 
@@ -75,16 +79,31 @@ PROMPT='%F{cyan}[%~]$%f '
 
 zsh_title_precmd(){
   local title
+  local pwd
+  local project_root
 
   if [ -n "$APP_ROOT" ]; then
     title=$(basename "$APP_ROOT")
   else
-    case "$(pwd)" in
+    pwd=$(pwd)
+    case "$pwd" in
       $HOME*)
         title=HOME
         ;;
       *)
-        title=GLOBAL
+        if [ -z "$DOCKER_WRAPPER_SERVER_HOSTNAME" ]; then
+          title=GLOBAL
+        else
+          project_root=/apps/${DOCKER_WRAPPER_SERVER_HOSTNAME//-/\/}
+          case "$pwd" in
+            ${project_root}*)
+              title=${pwd#$project_root}
+              if [ -z "$title" ]; then
+                title=$DOCKER_WRAPPER_SERVER_HOSTNAME
+              fi
+              ;;
+          esac
+        fi
         ;;
     esac
   fi
