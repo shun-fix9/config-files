@@ -85,10 +85,10 @@ map ,q :q<CR>
 map ,w :x<CR>
 map ,t :tabnew<CR>
 
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-map <C-H> gT
-map <C-L> gt
+map zj <C-W>j
+map zk <C-W>k
+map zh gT
+map zl gt
 
 map + <C-W>+
 map - <C-W>-
