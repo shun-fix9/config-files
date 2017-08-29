@@ -43,9 +43,16 @@ repo = 'vim-airline/vim-airline'
 depends = ['vim-fugitive']
 
 [[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+depends = ['vim-airline']
+hook_add = '''
+au VimEnter * nested AirlineTheme behelit
+'''
+
+[[plugins]]
 repo = 'vim-scripts/Railscasts-Theme-GUIand256color'
 hook_add = '''
-colorscheme railscasts
+au VimEnter * nested colorscheme railscasts
 '''
 
 [[plugins]]
