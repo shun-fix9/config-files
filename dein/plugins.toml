@@ -46,7 +46,7 @@ depends = ['vim-fugitive']
 repo = 'vim-airline/vim-airline-themes'
 depends = ['vim-airline']
 hook_add = '''
-au VimEnter * nested AirlineTheme behelit
+au VimEnter * nested AirlineTheme vice
 '''
 
 [[plugins]]
