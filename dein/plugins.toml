@@ -50,9 +50,9 @@ au VimEnter * nested AirlineTheme vice
 '''
 
 [[plugins]]
-repo = 'vim-scripts/Railscasts-Theme-GUIand256color'
+repo = 'geetarista/ego.vim'
 hook_add = '''
-au VimEnter * nested colorscheme railscasts
+au VimEnter * nested colorscheme ego
 '''
 
 [[plugins]]
