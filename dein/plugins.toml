@@ -50,9 +50,9 @@ au VimEnter * nested AirlineTheme vice
 '''
 
 [[plugins]]
-repo = 'geetarista/ego.vim'
+repo = 'marcopaganini/mojave-vim-theme'
 hook_add = '''
-au VimEnter * nested colorscheme ego
+au VimEnter * nested colorscheme mojave
 '''
 
 [[plugins]]
