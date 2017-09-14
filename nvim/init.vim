@@ -80,10 +80,6 @@ set hidden
 let loaded_matchparen = 1
 let g:netrw_browse_split = 1
 
-set termguicolors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
 map ,s :w<CR>
 map ,q :q<CR>
 map ,w :x<CR>
