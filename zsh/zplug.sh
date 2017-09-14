@@ -22,17 +22,11 @@ zplug "getto-systems/tmux-wrapper", as:command, use:"bin/*"
 zplug "getto-systems/git-release-request", as:command, use:"bin/*"
 zplug "getto-systems/birdfirm", as:command, use:"bin/*"
 zplug "getto-systems/docker-wrapper", as:command, use:"bin/*"
+zplug "getto-systems/docker-wrapper-commands", as:command, use:"bin/*"
 
 ##
-# INSTALL and LOAD
+# LOAD
 #
-
-if ! zplug check --verbose; then
-  printf "Install? [y/N]: "
-  if read -q; then
-    echo; zplug install
-  fi
-fi
 
 # direnv workaround
 chmod a+x ~/.zplug/repos/direnv/direnv/*

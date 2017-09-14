@@ -15,12 +15,12 @@ bindkey "^N" down-line-or-search
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/shun/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
-fpath=(/home/shun/.config/zsh/completions $fpath)
+fpath=($HOME/.config/zsh/completions $fpath)
 
-autoload -Uz compinit
-compinit
+#autoload -Uz compinit
+#compinit
 # End of lines added by compinstall
 
 ### 補完侯補をメニューから選択する。
@@ -148,3 +148,6 @@ alias p='git pub'
 alias post='git pub && git post'
 
 alias clear-zcompdump='rm -f ~/.zcompdump ~/.zplug/zcompdump'
+
+# docker-wrapper
+. docker-wrapper.rc.env

@@ -12,7 +12,7 @@ repo = 'Shougo/denite.nvim'
 depends = ['neomru.vim', 'neoyank.vim']
 hook_add = '''
 nnoremap <silent> ,a :<C-u>Denite file_rec<CR>
-nnoremap <silent> ,b :<C-u>Denite buffer -mode=normal<CR>
+nnoremap <silent> ,b :<C-u>Denite buffer<CR>
 nnoremap <silent> ,f :<C-u>DeniteBufferDir file_rec<CR>
 nnoremap <silent> ,g :<C-u>Denite grep<CR>
 nnoremap <silent> ,z :<C-u>Denite file_mru<CR>
@@ -52,6 +52,7 @@ au VimEnter * nested AirlineTheme vice
 [[plugins]]
 repo = 'marcopaganini/mojave-vim-theme'
 hook_add = '''
+set termguicolors
 au VimEnter * nested colorscheme mojave
 '''
 
