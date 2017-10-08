@@ -82,7 +82,7 @@ let g:netrw_browse_split = 1
 
 map ,s :w<CR>
 map ,q :q<CR>
-map ,w :x<CR>
+map ,w :bd<CR>
 map ,t :tabnew<CR>
 
 map zj <C-W>j
