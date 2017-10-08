@@ -1,4 +1,4 @@
-. ~/.config/zsh/zplug.sh
+. ~/.config/zsh/load_plugin.sh
 
 # Lines configured by zsh-newuser-install
 if [ -z "$DOCKER_WRAPPER_SERVER_HOSTNAME" ]; then
@@ -120,7 +120,7 @@ if [ -f /etc/labo-env ]; then
   eval "$(cat /etc/labo-env | grep '^\(DOCKER_HOST=\|DOCKER_WRAPPER_\|LABO_\)' | sed 's/^/export /')"
 fi
 
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:/usr/local/bin:$HOME/bin
 export RAILS_DEVEL_NAME=$(basename $HOME)
 
 
