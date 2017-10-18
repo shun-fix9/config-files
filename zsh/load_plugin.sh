@@ -19,6 +19,11 @@ load_plugin_main(){
 
   _load_plugin_bin
 }
+load_plugin_after(){
+  if [ -x "$HOME/bin/direnv" ]; then
+    eval "$($HOME/bin/direnv hook zsh)"
+  fi
+}
 load_plugin_setup(){
   bin=$HOME/bin
   plugin_dir=$HOME/.plugins
@@ -101,3 +106,4 @@ _load_plugin_bin(){
 }
 
 : $(load_plugin_main)
+load_plugin_after

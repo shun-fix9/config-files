@@ -81,9 +81,7 @@ let loaded_matchparen = 1
 let g:netrw_browse_split = 1
 
 map ,s :w<CR>
-map ,q :q<CR>
-map ,w :bd<CR>
-map ,t :tabnew<CR>
+map ,q :bd<CR>
 
 map zj <C-W>j
 map zk <C-W>k

@@ -120,7 +120,7 @@ if [ -f /etc/labo-env ]; then
   eval "$(cat /etc/labo-env | grep '^\(DOCKER_HOST=\|DOCKER_WRAPPER_\|LABO_\)' | sed 's/^/export /')"
 fi
 
-export PATH=$PATH:/usr/local/bin:$HOME/bin
+export PATH=/usr/bin:/usr/local/bin:$HOME/bin:$PATH
 export RAILS_DEVEL_NAME=$(basename $HOME)
 
 
