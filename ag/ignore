@@ -8,3 +8,4 @@ _build
 npm-shrinkwrap.json
 Gemfile.lock
 mix.lock
+CHANGELOG*
