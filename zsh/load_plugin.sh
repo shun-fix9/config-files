@@ -10,7 +10,6 @@ load_plugin_main(){
   load_plugin_git "https://github.com" "sanzen-sekai/git-sub-status"
   load_plugin_git "https://github.com" "sanzen-sekai/git-pub"
   load_plugin_git "https://github.com" "sanzen-sekai/git-post"
-  load_plugin_git "https://github.com" "sanzen-sekai/git-branch-and-post"
   load_plugin_git "https://github.com" "getto-systems/tmux-wrapper"
   load_plugin_git "https://github.com" "getto-systems/git-release-request"
   load_plugin_git "https://github.com" "getto-systems/birdfirm"
