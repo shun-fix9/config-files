@@ -125,6 +125,7 @@ export RAILS_DEVEL_NAME=$(basename $HOME)
 
 
 # alias
+alias docker='sudo docker'
 alias vi='nvim'
 
 alias rm='rm -i'
@@ -144,6 +145,7 @@ alias ci='git commit -m'
 alias br='git create-work-branch'
 alias ft='git create-feature-branch'
 alias rr='git release-request'
+alias rs='git release-status'
 alias rt='git purge; git release-tag'
 alias p='git pub'
 alias post='git pub && git post'
@@ -152,3 +154,4 @@ alias clear-zcompdump='rm -f ~/.zcompdump ~/.zplug/zcompdump'
 
 # docker-wrapper
 . docker-wrapper.rc.env
+export DOCKER_WRAPPER_WITH_SUDO=true
