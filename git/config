@@ -19,6 +19,9 @@
 
   up = "!git remote update --prune && git fetch --tags --prune && git m && git pull"
 
+  major = release-request-major
+  minor = release-request-minor
+
   re = readme
 
   user-fix9 = "!git config --local user.name shun && git config --local user.email shun.fix9@gmail.com"
