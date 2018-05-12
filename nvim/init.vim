@@ -82,6 +82,7 @@ let g:netrw_browse_split = 1
 
 map ,s :w<CR>
 map ,q :bd<CR>
+map ,r :![ -f tmp/build.txt ] && touch tmp/build.txt<CR>
 
 map zj <C-W>j
 map zk <C-W>k
