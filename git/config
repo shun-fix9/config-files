@@ -19,9 +19,9 @@
 
   up = "!git remote update --prune && git fetch --tags --prune && git m && git pull"
 
-  major = release-request-major
-  minor = release-request-minor
-  patch = release-request-patch
+  major = release-request major
+  minor = release-request minor
+  patch = release-request patch
 
   re = readme
 
