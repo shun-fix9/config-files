@@ -58,3 +58,9 @@ repo = 'elixir-lang/vim-elixir'
 
 [[plugins]]
 repo = 'lambdatoast/elm.vim'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+hook_add = '''
+let g:rustfmt_autosave = 0
+'''

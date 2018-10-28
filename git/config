@@ -19,8 +19,9 @@
 
   up = "!git remote update --prune && git fetch --tags --prune && git m && git pull"
 
-  major = release-request-major
-  minor = release-request-minor
+  major = "!git create-work-branch 'major version' && git release-request-major && git pub"
+  minor = "!git create-work-branch 'minor version' && git release-request-minor && git pub"
+  patch = "!git create-work-branch 'patch version' && git release-request-patch && git pub"
 
   re = readme
 
@@ -28,7 +29,7 @@
   user-getto = "!git config --local user.name shun && git config --local user.email shun@getto.systems"
 
   reg-pub-fix9 = reg-pub github:shun-fix9 bitbucket:shun-fix9
-  reg-pub-getto = reg-pub github:shun-getto-systems bitbucket:shun-getto-systems
+  reg-pub-getto = reg-pub github:shun-getto-systems bitbucket:shun-getto-systems gitlab:shun-getto-systems-groups
 
   setup-fix9 = "!git user-fix9 && git reg-pub-fix9"
   setup-getto = "!git user-getto && git reg-pub-getto"
