@@ -19,9 +19,9 @@
 
   up = "!git remote update --prune && git fetch --tags --prune && git m && git pull"
 
-  major = "!git create-work-branch 'major version' && git release-request-major && git pub"
-  minor = "!git create-work-branch 'minor version' && git release-request-minor && git pub"
-  patch = "!git create-work-branch 'patch version' && git release-request-patch && git pub"
+  major = release-request-major
+  minor = release-request-minor
+  patch = release-request-patch
 
   re = readme
 
