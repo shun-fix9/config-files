@@ -4,26 +4,13 @@
   tool = vimdiff
 [alias]
   a = add -A
-
   ci = commit -v
-  ci-empty = commit -v --allow-empty
-  ci-init = !git ci-empty -m 'initial commit'
-
   co = checkout
   m = checkout master
-
   br = branch
-  current = symbolic-ref --short HEAD
-
   tmp = stash save -u
 
   up = "!git remote update --prune && git fetch --tags --prune && git m && git pull"
-
-  major = release-request major
-  minor = release-request minor
-  patch = release-request patch
-
-  re = readme
 
   user-fix9 = "!git config --local user.name shun && git config --local user.email shun.fix9@gmail.com"
   user-getto = "!git config --local user.name shun && git config --local user.email shun@getto.systems"
