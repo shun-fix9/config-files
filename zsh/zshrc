@@ -112,7 +112,7 @@ zsh_title_precmd(){
     esac
   fi
 
-  tmux rename-window $title
+  tmux rename-window $title 2> /dev/null
 }
 
 autoload -Uz add-zsh-hook
