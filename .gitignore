@@ -7,5 +7,9 @@
 /nvim/.netrwhist
 /nvim/cache_nvim
 /nvim/state_nvim.vim
+/nvim/cache_vi
+/nvim/state_vi.vim
+
+/fisher/
 
 /gcloud/
