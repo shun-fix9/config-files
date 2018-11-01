@@ -1,4 +1,5 @@
 . ~/.config/zsh/load_plugin.sh
+. ~/.secrets.sh
 
 # Lines configured by zsh-newuser-install
 if [ -z "$DOCKER_WRAPPER_SERVER_HOSTNAME" ]; then
@@ -102,13 +103,16 @@ zsh_title_precmd(){
                 title=$DOCKER_WRAPPER_SERVER_HOSTNAME
               fi
               ;;
+            *)
+              title=$DOCKER_WRAPPER_SERVER_HOSTNAME
+              ;;
           esac
         fi
         ;;
     esac
   fi
 
-  print -n "\ek$title\e\\"
+  tmux rename-window $title
 }
 
 autoload -Uz add-zsh-hook
