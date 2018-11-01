@@ -2,8 +2,7 @@ load_plugin_main(){
   load_plugin_setup
 
   load_plugin_release direnv "https://github.com/direnv/direnv/releases/download/v2.13.1/direnv.linux-amd64" direnv
-  load_plugin_release peco   "https://github.com/peco/peco/releases/download/v0.5.1/peco_linux_amd64.tar.gz"
-  load_plugin_release fzf    "https://github.com/junegunn/fzf-bin/releases/download/0.17.0/fzf-0.17.0-linux_amd64.tgz"
+  load_plugin_release fzf    "https://github.com/junegunn/fzf-bin/releases/download/0.17.5/fzf-0.17.5-linux_amd64.tgz"
 
   load_plugin_git "https://github.com" "sanzen-sekai/mypassword"
   load_plugin_git "https://github.com" "sanzen-sekai/git-readme"
@@ -18,11 +17,6 @@ load_plugin_main(){
   load_plugin_git "https://github.com" "getto-systems/docker-wrapper-commands"
 
   _load_plugin_bin
-}
-load_plugin_after(){
-  if [ -x "$HOME/bin/direnv" ]; then
-    eval "$($HOME/bin/direnv hook zsh)"
-  fi
 }
 load_plugin_setup(){
   bin=$HOME/bin
@@ -106,4 +100,3 @@ _load_plugin_bin(){
 }
 
 : $(load_plugin_main)
-load_plugin_after

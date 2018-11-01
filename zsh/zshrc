@@ -1,4 +1,8 @@
 . ~/.config/zsh/load_plugin.sh
+if [ -x "$HOME/bin/direnv" ]; then
+  eval "$($HOME/bin/direnv hook zsh)"
+fi
+
 . ~/.secrets.sh
 
 # Lines configured by zsh-newuser-install
