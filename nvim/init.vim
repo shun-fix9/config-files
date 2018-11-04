@@ -82,7 +82,7 @@ let g:netrw_browse_split = 1
 
 map ,s :w<CR>
 map ,q :bd<CR>
-map ,r :!find tmp -type f -name build.txt | xargs touch<CR><CR>
+map ,r :!find tmp -type f -a -name build.txt \| xargs touch<CR><CR>
 
 map zj <C-W>j
 map zk <C-W>k
