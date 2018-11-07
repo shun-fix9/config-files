@@ -6,11 +6,27 @@
 # - Git branch and dirty state (if inside a git repo)
 
 function _git_branch_name
-  echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+  echo (command git symbolic-ref --short HEAD ^/dev/null)
 end
 
 function _git_is_dirty
   echo (command git status -s --ignore-submodules=dirty ^/dev/null)
+end
+
+function _git_stash_count
+  echo (command git stash list ^/dev/null | wc -l)
+end
+
+function _git_wip_branch_count
+  echo (command git branch ^/dev/null | grep -v master | grep -v "^*" | wc -l)
+end
+
+function _tmux_window_name
+  if set -q APP_ROOT
+    echo (command basename "$APP_ROOT" ^/dev/null)
+  else
+    echo 'EXTRA'
+  end
 end
 
 function fish_prompt
@@ -30,11 +46,6 @@ function fish_prompt
   # Add a newline before new prompts
   echo -e ''
 
-  # Display [venvname] if in a virtualenv
-  if set -q VIRTUAL_ENV
-      echo -n -s (set_color -b cyan black) '[' (basename "$VIRTUAL_ENV") ']' $normal ' '
-  end
-
   # Print pwd or full path
   echo -n -s $cwd $normal
 
@@ -43,11 +54,26 @@ function fish_prompt
     set -l git_branch (_git_branch_name)
 
     if [ (_git_is_dirty) ]
-      set git_info '(' $yellow $git_branch "±" $normal ')'
+      set git_info $yellow $git_branch "(*)" $normal
     else
-      set git_info '(' $green $git_branch $normal ')'
+      set git_info $cyan $git_branch $normal
     end
-    echo -n -s ' · ' $git_info $normal
+
+    if [ (_git_wip_branch_count) = "0" ]
+      set git_wip_info ""
+    else
+      set -l git_wip_branch_count (_git_wip_branch_count)
+      set git_wip_info $yellow " (branch +" $git_wip_branch_count ")" $normal
+    end
+
+    if [ (_git_stash_count) = "0" ]
+      set git_stash_info ""
+    else
+      set -l git_stash_count (_git_stash_count)
+      set git_stash_info $yellow " (stash +" $git_stash_count ")" $normal
+    end
+
+    echo -n -s ' -> ' $git_info $git_wip_info $git_stash_info $normal
   end
 
   set -l prompt_color $red
@@ -57,10 +83,8 @@ function fish_prompt
 
   # Terminate with a nice prompt char
   echo -e ''
-  echo -e -n -s $prompt_color '⟩ ' $normal
+  echo -e -n -s $prompt_color '> ' $normal
 
   # set tmux window name
-  if [ (echo $APP_ROOT) ]
-    tmux rename-window (basename $APP_ROOT) 2> /dev/null
-  end
+  tmux rename-window (_tmux_window_name) ^/dev/null
 end
