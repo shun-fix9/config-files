@@ -80,7 +80,7 @@ set hidden
 let loaded_matchparen = 1
 let g:netrw_browse_split = 1
 
-map ,s :w<CR>
+map <SPACE>s :w<CR>
 map ,q :bd<CR>
 map ,r :!find tmp -type f -a -name build.txt \| xargs touch<CR><CR>
 

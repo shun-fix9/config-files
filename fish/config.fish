@@ -6,8 +6,8 @@ bash ~/.config/zsh/load_plugin.sh
 # jethrokuan/z
 # oh-my-fish/theme-clearance
 
-set -x LANG en_US.UTF-8
-set -x LC_ALL en_US.UTF-8
+set -x LANG C
+set -x LC_ALL C
 set -x TERM xterm-256color
 set -x EDITOR vi
 
@@ -26,7 +26,9 @@ alias mv 'mv -i'
 alias s='git status-verbose'
 alias a='git add -A'
 alias ci='git commit -m'
+alias f='git sync-pub'
 alias br='git create-work-branch'
+alias bs='git post-status'
 alias ft='git create-feature-branch'
 alias rr-major='git release-request major'
 alias rr='git release-request minor'
