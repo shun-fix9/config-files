@@ -1,0 +1,7 @@
+image: buildpack-deps:stretch
+
+release:
+  only:
+    - release@shun-shun-fix9-labo/config-files
+  script:
+    - ./bin/push_tags.sh
