@@ -10,6 +10,7 @@ set -x LANG C
 set -x LC_ALL C
 set -x TERM xterm-256color
 set -x EDITOR vi
+set -x LESSCHARSET utf-8
 
 set -x PATH $HOME/bin $PATH
 
