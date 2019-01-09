@@ -11,9 +11,9 @@ repo = 'Shougo/neoyank.vim'
 repo = 'Shougo/denite.nvim'
 depends = ['neomru.vim', 'neoyank.vim']
 hook_add = '''
-nnoremap <silent> <space>f :<C-u>Denite file_rec<CR>
-nnoremap <silent> <space>d :<C-u>Denite buffer<CR>
-nnoremap <silent> <space>r :<C-u>Denite file_mru<CR>
+nnoremap <silent> <space>l :<C-u>Denite file_rec<CR>
+nnoremap <silent> <space>b :<C-u>Denite buffer<CR>
+nnoremap <silent> <space>p :<C-u>Denite file_mru<CR>
 call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 call denite#custom#var('grep', 'command', ['ag'])
 call denite#custom#var('grep', 'default_opts', ['-i', '--vimgrep'])
