@@ -81,18 +81,13 @@ let loaded_matchparen = 1
 let g:netrw_browse_split = 1
 
 map <SPACE>s :w<CR>
-map ,q :bd<CR>
-map ,r :!find tmp -type f -a -name build.txt \| xargs touch<CR><CR>
-
-map zj <C-W>j
-map zk <C-W>k
-map zh gT
-map zl gt
-
-map + <C-W>+
-map - <C-W>-
-
-nmap <silent> <F6> :set number!<CR>
+map <SPACE>q :bd!<CR>
+map <SPACE>z :!find tmp -type f -a -name build.txt \| xargs touch<CR><CR>
+map <SPACE>v :terminal git status-verbose<CR>a
+map <SPACE>a :!git add -A<CR><CR>
+map <SPACE>c :!git create-work-branch "
+map <SPACE>r :!git release-request minor "
+map <SPACE>x :!git purge
 
 nnoremap j gj
 nnoremap k gk
