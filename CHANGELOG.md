@@ -1,3 +1,7 @@
+# Version : 0.3.0
+
+fix: vi alias
+
 # Version : 0.2.0
 
 fix: LESS charset
