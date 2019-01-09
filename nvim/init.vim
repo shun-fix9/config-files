@@ -86,6 +86,7 @@ map <SPACE>z :!find tmp -type f -a -name build.txt \| xargs touch<CR><CR>
 map <SPACE>v :terminal git status-verbose<CR>a
 map <SPACE>a :!git add -A<CR><CR>
 map <SPACE>c :!git create-work-branch "
+map <SPACE>r :!git release-request minor "
 map <SPACE>x :!git purge
 
 nnoremap j gj
