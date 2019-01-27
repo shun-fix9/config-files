@@ -81,14 +81,17 @@ let loaded_matchparen = 1
 let g:netrw_browse_split = 1
 
 nnoremap <silent> <SPACE>s :w<CR>
-nnoremap <silent> <SPACE>q :bd!<CR>
-nnoremap <silent> <SPACE>z :!find tmp -type f -a -name build.txt \| xargs touch<CR><CR>
-nnoremap <silent> <SPACE>v :terminal git status-verbose<CR>a
-nnoremap <silent> <SPACE>n :terminal git release-status<CR>
+nnoremap <silent> <SPACE>h :noh<CR>
+nnoremap <silent> <SPACE>w :bd!<CR>
+nnoremap <silent> <SPACE>v :terminal git status-verbose<CR>
+nnoremap <silent> <SPACE>d :terminal git diff<CR>
+nnoremap <silent> <SPACE>D :terminal git diff --cached<CR>
 nnoremap <silent> <SPACE>a :!git add -A<CR><CR>
 nnoremap <silent> <SPACE>c q:a!git create-work-branch ""<LEFT>
-nnoremap <silent> <SPACE>r q:a!git release-request minor ""<LEFT><ESC>
+nnoremap <silent> <SPACE>rr q:a!git release-request minor ""<LEFT><ESC>
+nnoremap <silent> <SPACE>rs :terminal git release-status<CR>
 nnoremap <SPACE>x :!git purge
+nnoremap <silent> <C-n> q:pF/<RIGHT>C
 
 nnoremap j gj
 nnoremap k gk
