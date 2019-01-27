@@ -1,3 +1,7 @@
+# Version : 0.4.0
+
+fix: vim config
+
 # Version : 0.3.0
 
 fix: vi alias
