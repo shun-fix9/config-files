@@ -77,6 +77,8 @@ set foldnestmax=1
 
 set hidden
 
+set directory=$HOME/.vim/swapfiles//
+
 let loaded_matchparen = 1
 let g:netrw_browse_split = 1
 
