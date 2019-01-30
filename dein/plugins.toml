@@ -15,7 +15,7 @@ nnoremap <silent> <SPACE>k :Denite file/rec<CR>
 nnoremap <silent> <SPACE>l :Denite file/rec/git<CR>
 nnoremap <silent> <SPACE>b :Denite buffer<CR>
 nnoremap <silent> <SPACE>z :Denite file_mru<CR>
-nnoremap <silent> <SPACE>g :Denite grep -buffer-name=search-buffer-denite -path=.<CR>
+nnoremap <silent> <SPACE>g :Denite grep -buffer-name=search-buffer-denite -path=. -no-empty<CR>
 nnoremap <silent> <SPACE>f :Denite -resume -buffer-name=search-buffer-denite<CR>
 nnoremap <silent> <SPACE>n :Denite -resume -buffer-name=search-buffer-denite -select=+1 -immediately<CR>
 nnoremap <silent> <SPACE>p :Denite -resume -buffer-name=search-buffer-denite -select=-1 -immediately<CR>
