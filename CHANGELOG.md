@@ -1,3 +1,7 @@
+# Version : 0.6.0
+
+fix: config
+
 # Version : 0.5.0
 
 fix: set swapfile path
