@@ -93,7 +93,7 @@ nnoremap <silent> <SPACE>c q:a!git create-work-branch ""<LEFT>
 nnoremap <silent> <SPACE>rr q:a!git release-request minor ""<LEFT><ESC>
 nnoremap <silent> <SPACE>rs :terminal git release-status<CR>
 nnoremap <SPACE>x :!git purge
-nnoremap <silent> <C-n> q:pF/<RIGHT>C
+nnoremap <silent> <C-n> q:ae<SPACE><ESC>pF/<RIGHT>C
 
 nnoremap j gj
 nnoremap k gk
