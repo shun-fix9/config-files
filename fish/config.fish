@@ -1,5 +1,7 @@
 bash ~/.config/zsh/load_plugin.sh
 
+bash -c 'rm -f ~/.vim/swapfiles/*'
+
 # [fisherman plugins]
 # 0rax/fish-bd
 # jethrokuan/fzf
