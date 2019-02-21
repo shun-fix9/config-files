@@ -94,6 +94,7 @@ nnoremap <silent> <SPACE>rr q:a!git release-request minor ""<LEFT><ESC>
 nnoremap <silent> <SPACE>rs :terminal git release-status<CR>
 nnoremap <SPACE>x :!git purge
 nnoremap <silent> <C-n> q:ae<SPACE><ESC>pF/<RIGHT>C
+nnoremap <SPACE><BACKSPACE> :!rm -f ~/.vim/swapfiles/*
 
 nnoremap j gj
 nnoremap k gk
