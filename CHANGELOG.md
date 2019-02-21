@@ -1,3 +1,7 @@
+# Version : 0.9.0
+
+fix: config
+
 # Version : 0.8.0
 
 fix: remove all swapfile when fish initialized
