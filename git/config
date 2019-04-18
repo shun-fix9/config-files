@@ -14,13 +14,9 @@
   status-verbose = "!git branch && git status && git stash list"
 
   user-fix9 = "!git config --local user.name shun && git config --local user.email shun.fix9@gmail.com"
-  user-getto = "!git config --local user.name shun && git config --local user.email shun@getto.systems"
+  reg-pub-fix9 = reg-pub github:shun-fix9 bitbucket:shun-fix9 gitlab:shun-fix9-groups
 
-  reg-pub-fix9 = reg-pub github:shun-fix9 bitbucket:shun-fix9
-  reg-pub-getto = reg-pub github:shun-getto-systems bitbucket:shun-getto-systems gitlab:shun-getto-systems-groups
-
-  setup-fix9 = "!git user-fix9 && git reg-pub-fix9"
-  setup-getto = "!git user-getto && git reg-pub-getto"
+  setup = "!git user-fix9 && git reg-pub-fix9"
 [push]
   default = current
 [user]
