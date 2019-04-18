@@ -1,3 +1,7 @@
+# Version : 0.10.0
+
+fix: config
+
 # Version : 0.9.0
 
 fix: config
