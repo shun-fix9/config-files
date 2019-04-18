@@ -13,13 +13,12 @@ set -x EDITOR vi
 set -x LESSCHARSET utf-8
 
 set -x PATH $HOME/bin $PATH
+set -x PATH $LABO_DOCKER_HOME/bin $PATH
 
 eval (direnv hook fish)
 
 
 # alias
-alias docker 'sudo docker'
-
 alias rm 'rm -i'
 alias cp 'cp -i'
 alias mv 'mv -i'
@@ -37,6 +36,3 @@ alias rr='git release-request minor'
 alias rr-patch='git release-request patch'
 alias rs='git release-status'
 alias rt='git purge; git release-tag'
-
-# docker-wrapper
-set -x DOCKER_WRAPPER_WITH_SUDO true
