@@ -1,3 +1,7 @@
+# Version : 0.11.0
+
+fix: prompt
+
 # Version : 0.10.0
 
 fix: config
