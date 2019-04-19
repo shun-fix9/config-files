@@ -22,10 +22,14 @@ function _git_wip_branch_count
 end
 
 function _tmux_window_name
-  if set -q APP_ROOT
-    echo (command basename "$APP_ROOT" ^/dev/null)
+  if set -q TMUX_WINDOW_NAME
+    echo "$TMUX_WINDOW_NAME"
   else
-    echo 'EXTRA'
+    if set -q APP_ROOT
+      echo (command basename "$APP_ROOT" ^/dev/null)
+    else
+      echo 'EXTRA'
+    end
   end
 end
 
