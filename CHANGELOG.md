@@ -1,3 +1,7 @@
+# Version : 0.12.0
+
+fix: branch count
+
 # Version : 0.11.0
 
 fix: prompt
