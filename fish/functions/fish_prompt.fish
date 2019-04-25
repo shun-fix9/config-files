@@ -18,7 +18,7 @@ function _git_stash_count
 end
 
 function _git_wip_branch_count
-  echo (command git branch ^/dev/null | grep -v master | grep -v "^*" | wc -l)
+  echo (command git branch ^/dev/null | grep -v (echo "\\("(echo (git branch -a ^/dev/null | grep remotes/origin/ | grep -v HEAD | sed "s#.*remotes/origin/##") | sed "s/ /\\\\|/g")"\\)") | grep -v "^*" | wc -l)
 end
 
 function _tmux_window_name
