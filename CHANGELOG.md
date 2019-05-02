@@ -1,3 +1,7 @@
+# Version : 0.13.0
+
+fix: vimrc
+
 # Version : 0.12.0
 
 fix: branch count
