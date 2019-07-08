@@ -1,0 +1,17 @@
+{
+  "languageserver": {
+    "elmLS": {
+      "command": "node_modules/.bin/elm-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["elm"],
+      "rootPatterns": ["elm.json"],
+      "initializationOptions": {
+        "runtime": "node",
+        "elmPath": "node_modules/.bin/elm",
+        "elmFormatPath": "node_modules/.bin/elm-format",
+        "elmTestPath": "node_modules/.bin/elm-test"
+      }
+    }
+  },
+  "coc.preferences.codeLens.enable": true
+}
