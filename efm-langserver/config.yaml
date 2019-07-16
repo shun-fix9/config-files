@@ -1,6 +1,6 @@
 languages:
   markdown:
-    lint-command: '/home/shun/coc/markdownlint/node_modules/.bin/markdownlint -s'
+    lint-command: '/home/shun/.vim/coc/markdownlint/node_modules/.bin/markdownlint -s'
     lint-stdin: true
     lint-formats:
       - '%f: %l: %m'
