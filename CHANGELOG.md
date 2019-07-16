@@ -1,3 +1,7 @@
+# Version : 0.15.0
+
+fix: config
+
 # Version : 0.14.0
 
 fix: dein plugins
