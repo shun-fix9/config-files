@@ -11,6 +11,11 @@
         "elmFormatPath": "node_modules/.bin/elm-format",
         "elmTestPath": "node_modules/.bin/elm-test"
       }
+    },
+    "efm": {
+      "command": "/home/shun/bin/efm-langserver",
+      "args": [],
+      "filetypes": ["markdown"]
     }
   },
   "coc.preferences.codeLens.enable": true
