@@ -1,3 +1,7 @@
+# Version : 0.16.0
+
+fix: coc resource path
+
 # Version : 0.15.0
 
 fix: config
