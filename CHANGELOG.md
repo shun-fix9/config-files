@@ -1,3 +1,7 @@
+# Version : 0.17.0
+
+fix: shortcut
+
 # Version : 0.16.0
 
 fix: coc resource path

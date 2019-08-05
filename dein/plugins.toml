@@ -5,7 +5,7 @@ repo = 'Shougo/dein.vim'
 repo = 'Shougo/denite.nvim'
 depends = ['neomru.vim', 'neoyank.vim']
 hook_add = '''
-nnoremap <silent> <SPACE>p :Denite file/rec<CR>
+nnoremap <silent> <SPACE>f :Denite file/rec<CR>
 nnoremap <silent> <SPACE>l :Denite file/rec/git<CR>
 nnoremap <silent> <SPACE>b :Denite buffer<CR>
 nnoremap <silent> <SPACE>z :Denite file_mru<CR>
@@ -33,7 +33,8 @@ endfunction
 
 autocmd FileType denite-filter call s:denite_filter_my_settings()
 function! s:denite_filter_my_settings() abort
-  imap <silent><buffer> <C-o> <Plug>(denite_filter_quit)<CR>
+  imap <silent><buffer> <CR> <Plug>(denite_filter_quit)<CR>
+  imap <silent><buffer> <C-o> <Plug>(denite_filter_quit)
 endfunction
 '''
 
