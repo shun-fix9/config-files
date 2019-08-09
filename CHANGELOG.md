@@ -1,3 +1,7 @@
+# Version : 0.19.0
+
+fix: labo-container env path
+
 # Version : 0.18.0
 
 fix: load container env
