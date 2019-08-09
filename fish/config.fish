@@ -16,6 +16,7 @@ set -x PATH $HOME/bin $PATH
 set -x PATH $LABO_DOCKER_HOME/bin $PATH
 
 eval (direnv hook fish)
+eval (cat .labo-container.env | sed 's/=/ /' | sed 's/^/set -x /' | sed 's/$/;/')
 
 
 # alias
