@@ -1,3 +1,10 @@
+# CHANGELOG
+
+## Version : 0.20.0
+
+- fix: gitlab-ci : See merge request shun-fix9-labo/config-files!48
+- fix: shortcut command : See merge request shun-fix9-labo/config-files!47
+
 # Version : 0.19.0
 
 fix: labo-container env path
