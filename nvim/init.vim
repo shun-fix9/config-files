@@ -90,9 +90,8 @@ nnoremap <silent> <SPACE>d :terminal git diff<CR>
 nnoremap <silent> <SPACE>D :terminal git diff --cached<CR>
 nnoremap <silent> <SPACE>a :!git add -A<CR><CR>
 nnoremap <silent> <SPACE>c q:a!git create-work-branch ""<LEFT>
-nnoremap <silent> <SPACE>rr q:a!git release-request minor ""<LEFT><ESC>
-nnoremap <silent> <SPACE>rs :terminal git release-status<CR>
-nnoremap <silent> <SPACE>rn q:a!git fetch origin && git rebase origin/master
+nnoremap <silent> <SPACE>r q:a!git fetch origin && git rebase origin/master
+nnoremap <silent> <SPACE>m q:a!git fetch maint && git merge maint/maintenance
 nnoremap <silent> <SPACE>p q:a!git pub
 nnoremap <SPACE>x :!git purge
 nnoremap <silent> <C-n> q:ae<SPACE><ESC>pF/<RIGHT>C
