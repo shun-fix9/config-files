@@ -5,8 +5,8 @@ repo = 'Shougo/dein.vim'
 repo = 'Shougo/denite.nvim'
 depends = ['neomru.vim', 'neoyank.vim']
 hook_add = '''
-nnoremap <silent> <SPACE>f :Denite file/rec<CR>
-nnoremap <silent> <SPACE>l :Denite file/rec/git<CR>
+nnoremap <silent> <SPACE>l :Denite file/rec<CR>
+nnoremap <silent> <SPACE>f :Denite file/rec/git<CR>
 nnoremap <silent> <SPACE>b :Denite buffer<CR>
 nnoremap <silent> <SPACE>z :Denite file_mru<CR>
 
