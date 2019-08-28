@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.23.0
+
+- fix: push_tags : See merge request shun-fix9-base/labo/config-files!51
+
+
 ## Version : 0.22.0
 
 - fix: shortcut : See merge request shun-fix9-labo/config-files!50
