@@ -13,10 +13,13 @@
   up = "!git remote update --prune && git fetch --tags --prune && git m && git pull"
   status-verbose = "!git branch && git status && git stash list"
 
-  user-fix9 = "!git config --local user.name shun && git config --local user.email shun.fix9@gmail.com"
-  reg-pub-fix9 = reg-pub github:shun-fix9 bitbucket:shun-fix9 gitlab:shun-fix9-groups
+  setup-user = "!git config --local user.name shun && git config --local user.email shun.fix9@gmail.com"
+  setup-pub = reg-pub github:shun-fix9 bitbucket:shun-fix9 gitlab:shun-fix9-forks
+  setup-maint = "![ ! -f $APP_ROOT/.git-maint-repo ] || git remote-add-maint $(cat $APP_ROOT/.git-maint-repo)"
 
-  setup = "!git user-fix9 && git reg-pub-fix9"
+  remote-add-maint = "!bash -c 'git remote rm maint 2> /dev/null; git remote add maint $1' -s"
+
+  setup = "!git setup-user && git setup-pub && git setup-maint"
 [push]
   default = current
 [user]
