@@ -15,7 +15,7 @@
 
   setup-user = "!git config --local user.name shun && git config --local user.email shun.fix9@gmail.com"
   setup-pub = reg-pub github:shun-fix9 bitbucket:shun-fix9 gitlab:shun-fix9-forks
-  setup-maint = "![ ! -f $APP_ROOT/.git-maint-repo ] || git remote-add-maint $(cat $APP_ROOT/.git-maint-repo)"
+  setup-maint = "![ ! -f .git-maint-repo ] || git remote-add-maint $(cat .git-maint-repo)"
 
   remote-add-maint = "!bash -c 'git remote rm maint 2> /dev/null; git remote add maint $1' -s"
 
