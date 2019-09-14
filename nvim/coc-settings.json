@@ -16,6 +16,11 @@
       "command": "/home/shun/bin/efm-langserver",
       "args": [],
       "filetypes": ["markdown"]
+    },
+    "rust": {
+      "command": "rustup",
+      "args": ["run", "stable", "rls"],
+      "filetypes": ["rust"]
     }
   },
   "coc.preferences.codeLens.enable": true
