@@ -112,8 +112,10 @@ hook_add = '''
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   'elm': ['elm-format'],
+\   'rust': ['rustfmt'],
 \}
 let g:ale_elm_format_executable = 'elm-format'
 let g:ale_elm_format_options = '--yes --elm-version=0.19'
+let g:ale_rustfmt_executable = 'rustfmt'
 '''
 
