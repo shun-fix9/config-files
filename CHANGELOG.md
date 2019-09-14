@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.26.0
+
+- add: rust config : See merge request shun-fix9-base/labo/config-files!54
+
+
 ## Version : 0.25.0
 
 - fix: setup-maint : See merge request shun-fix9-base/labo/config-files!53
