@@ -58,14 +58,14 @@ depends = ['vim-fugitive']
 repo = 'vim-airline/vim-airline-themes'
 depends = ['vim-airline']
 hook_add = '''
-au VimEnter * nested AirlineTheme vice
+au VimEnter * nested AirlineTheme tomorrow
 '''
 
 [[plugins]]
-repo = 'marcopaganini/mojave-vim-theme'
+repo = 'benburrill/potato-colors'
 hook_add = '''
 set termguicolors
-au VimEnter * nested colorscheme mojave
+au VimEnter * nested colorscheme potato
 '''
 
 [[plugins]]
