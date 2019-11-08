@@ -9,8 +9,8 @@ endif
 
 execute 'set runtimepath^=' . s:dein_repo_dir
 
-if dein#load_state('/home/shun/.config/nvim')
-  call dein#begin('/home/shun/.config/nvim')
+if dein#load_state('/home/shun/.cache/dein')
+  call dein#begin('/home/shun/.cache/dein')
 
   call dein#load_toml('/home/shun/.config/dein/plugins.toml', {'lazy': 0})
   call dein#load_toml('/home/shun/.config/dein/lazy.toml', {'lazy': 1})
@@ -101,3 +101,5 @@ nnoremap <SPACE>G :!git grep "" \| sed "s/:.*//" \| uniq \| xargs /bin/echo<LEFT
 
 nnoremap j gj
 nnoremap k gk
+
+imap <C-L> <Esc>
