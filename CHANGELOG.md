@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.28.0
+
+- fix: tmux.config : See merge request shun-fix9-base/labo/config-files!56
+
+
 ## Version : 0.27.0
 
 - fix: color settings : See merge request shun-fix9-base/labo/config-files!55
