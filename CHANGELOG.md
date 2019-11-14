@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.31.0
+
+- fix: colorscheme : See merge request shun-fix9-base/labo/config-files!59
+
+
 ## Version : 0.30.0
 
 - fix: enable_experimental_conpty_backend : See merge request shun-fix9-base/labo/config-files!58
