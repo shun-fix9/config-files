@@ -62,10 +62,14 @@ au VimEnter * nested AirlineTheme tomorrow
 '''
 
 [[plugins]]
-repo = 'benburrill/potato-colors'
+repo = 'phanviet/vim-monokai-pro'
 hook_add = '''
 set termguicolors
-au VimEnter * nested colorscheme potato
+au VimEnter * nested colorscheme monokai_pro
+au VimEnter * nested hi Normal guibg=NONE
+au VimEnter * nested hi LineNr guibg=NONE
+au VimEnter * nested hi NonText guibg=NONE
+au VimEnter * nested hi SpecialKey guibg=NONE
 '''
 
 [[plugins]]
