@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.32.0
+
+- fix: space-binding : See merge request shun-fix9-base/labo/config-files!60
+
+
 ## Version : 0.31.0
 
 - fix: colorscheme : See merge request shun-fix9-base/labo/config-files!59
