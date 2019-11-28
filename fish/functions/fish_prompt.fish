@@ -21,18 +21,6 @@ function _git_wip_branch_count
   echo (command git branch ^/dev/null | grep -v (echo "\\("(echo (git branch -a ^/dev/null | grep remotes/origin/ | grep -v HEAD | sed "s#.*remotes/origin/##") | sed "s/ /\\\\|/g")"\\)") | grep -v "^*" | wc -l)
 end
 
-function _tmux_window_name
-  if set -q TMUX_WINDOW_NAME
-    echo "$TMUX_WINDOW_NAME"
-  else
-    if set -q APP_ROOT
-      echo (command basename "$APP_ROOT" ^/dev/null)
-    else
-      echo 'EXTRA'
-    end
-  end
-end
-
 function fish_prompt
   set -l last_status $status
 
@@ -88,7 +76,4 @@ function fish_prompt
   # Terminate with a nice prompt char
   echo -e ''
   echo -e -n -s $prompt_color '> ' $normal
-
-  # set tmux window name
-  tmux rename-window (_tmux_window_name) ^/dev/null
 end
