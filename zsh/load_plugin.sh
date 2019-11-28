@@ -1,4 +1,8 @@
 load_plugin_main(){
+  local bin
+  local plugin_dir
+  local local_plugin_dir
+
   load_plugin_setup
 
   load_plugin_release direnv "https://github.com/direnv/direnv/releases/download/v2.13.1/direnv.linux-amd64" direnv
@@ -19,6 +23,7 @@ load_plugin_main(){
 load_plugin_setup(){
   bin=$HOME/bin
   plugin_dir=$HOME/.plugins
+  local_plugin_dir=$HOME/.config/bin
 
   mkdir -p $bin
 }
@@ -76,6 +81,10 @@ load_plugin_git(){
   git clone $host/$repository .
 }
 load_plugin_bin(){
+  local bin
+  local plugin_dir
+  local local_plugin_dir
+
   load_plugin_setup
 
   echo "load bin..."
@@ -88,6 +97,14 @@ _load_plugin_bin(){
 
   cd $bin
   for file in $plugin_dir/*/*/bin/*; do
+    if [ -f "$file" ]; then
+      cmd=$(basename $file)
+      if [ ! -f "$cmd" ]; then
+        ln -s $file
+      fi
+    fi
+  done
+  for file in $local_plugin_dir/*; do
     if [ -f "$file" ]; then
       cmd=$(basename $file)
       if [ ! -f "$cmd" ]; then
