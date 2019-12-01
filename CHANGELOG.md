@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Version : 0.33.0
+
+- fix: gitlab-ci : See merge request shun-fix9-base/labo/config-files!63
+- fix: set-window-title : See merge request shun-fix9-base/labo/config-files!62
+- fix: set-window-title : See merge request shun-fix9-base/labo/config-files!61
+
+
 ## Version : 0.32.0
 
 - fix: space-binding : See merge request shun-fix9-base/labo/config-files!60
