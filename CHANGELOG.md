@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.34.0
+
+- fix: gitlab-ci : See merge request shun-fix9-base/labo/config-files!65
+
+
 ## Version : 0.33.0
 
 - fix: gitlab-ci : See merge request shun-fix9-base/labo/config-files!63
