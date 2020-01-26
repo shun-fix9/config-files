@@ -101,6 +101,8 @@ nnoremap <SPACE><BACKSPACE> :!rm -f ~/.vim/swapfiles/*
 nnoremap <SPACE>g :!git grep ""<LEFT>
 nnoremap <SPACE>G :!git grep "" \| sed "s/:.*//" \| uniq \| xargs /bin/echo<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
 
+noremap <F6> :set invnumber<CR>
+
 nnoremap j gj
 nnoremap k gk
 
