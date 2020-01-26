@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.35.0
+
+- add: golang settings : See merge request shun-fix9-base/labo/config-files!67
+
+
 ## Version : 0.34.0
 
 - fix: gitlab-ci : See merge request shun-fix9-base/labo/config-files!65
