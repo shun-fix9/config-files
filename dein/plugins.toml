@@ -111,15 +111,11 @@ nnoremap <silent> <space>n :<C-u>CocList diagnostics<cr>
 '''
 
 [[plugins]]
-repo = 'w0rp/ale'
+repo = 'Chiel92/vim-autoformat'
 hook_add = '''
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {
-\   'elm': ['elm-format'],
-\   'rust': ['rustfmt'],
-\}
-let g:ale_elm_format_executable = 'elm-format'
-let g:ale_elm_format_options = '--yes --elm-version=0.19'
-let g:ale_rustfmt_executable = 'rustfmt'
-'''
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
 
+au BufWrite * :Autoformat
+'''
