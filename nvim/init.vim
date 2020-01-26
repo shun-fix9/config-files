@@ -88,7 +88,8 @@ nnoremap <silent> <SPACE>w :bd!<CR>
 nnoremap <silent> <SPACE>v :terminal git status-verbose<CR>
 nnoremap <silent> <SPACE>d :terminal git diff<CR>
 nnoremap <silent> <SPACE>D :terminal git diff --cached<CR>
-nnoremap <silent> <SPACE>a :!git add -A<CR><CR>
+nnoremap <silent> <SPACE>a :!git add %<CR><CR>
+nnoremap <silent> <SPACE>A :!git add -A<CR><CR>
 nnoremap <silent> <SPACE>c q:a!git create-work-branch ""<LEFT>
 nnoremap <silent> <SPACE>C q:a!git commit -m "" && git push<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
 nnoremap <silent> <SPACE>r q:a!git fetch origin && git rebase origin/master
