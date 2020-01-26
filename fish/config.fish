@@ -15,6 +15,8 @@ set -x LESSCHARSET utf-8
 set -x PATH $HOME/bin $PATH
 set -x PATH $LABO_DOCKER_HOME/bin $PATH
 
+set -x GOBIN $HOME/.gobin
+
 eval (direnv hook fish)
 eval (cat ~/.labo-container.env | sed 's/=/ /' | sed 's/^/set -x /' | sed 's/$/;/')
 
