@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version : 0.36.0
+
+- fix: git add shortcut : See merge request shun-fix9-base/labo/config-files!70
+- add: GOBIN : See merge request shun-fix9-base/labo/config-files!69
+
+
 ## Version : 0.35.0
 
 - add: golang settings : See merge request shun-fix9-base/labo/config-files!67
