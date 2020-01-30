@@ -13,7 +13,7 @@
       }
     },
     "efm": {
-      "command": "/home/shun/bin/efm-langserver",
+      "command": "efm-langserver",
       "args": [],
       "filetypes": ["markdown"]
     },

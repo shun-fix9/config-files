@@ -95,6 +95,7 @@ nnoremap <silent> <SPACE>C q:a!git commit -m "" && git push<LEFT><LEFT><LEFT><LE
 nnoremap <silent> <SPACE>r q:a!git fetch origin && git rebase origin/master
 nnoremap <silent> <SPACE>m q:a!git fetch maint && git merge maint/maintenance
 nnoremap <silent> <SPACE>p q:a!git pub
+nnoremap <SPACE>u :!git up
 nnoremap <SPACE>x :!git purge
 nnoremap <SPACE>X :!echo 'git up && git branch -d $1' \| bash -s -- $(git symbolic-ref --short HEAD)
 nnoremap <silent> <C-n> q:ae<SPACE><ESC>pF/<RIGHT>C

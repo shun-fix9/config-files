@@ -10,7 +10,7 @@
   br = branch
   tmp = stash save -u
 
-  up = "!git remote update --prune && git fetch --tags --prune && git m && git pull"
+  up = "!git remote update --prune && git fetch --tags --prune && git checkout $(git parent) && git pull"
   status-verbose = "!git branch && git status && git stash list"
 
   setup-user = "!git config --local user.name shun && git config --local user.email shun.fix9@gmail.com"
