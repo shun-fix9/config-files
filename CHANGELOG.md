@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.37.0
+
+- fix: config : See merge request shun-fix9-base/labo/config-files!72
+
+
 ## Version : 0.36.0
 
 - fix: git add shortcut : See merge request shun-fix9-base/labo/config-files!70
