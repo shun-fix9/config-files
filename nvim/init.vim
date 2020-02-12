@@ -94,6 +94,7 @@ nnoremap <silent> <SPACE>A :!git add -A<CR><CR>:terminal git status-verbose<CR>
 nnoremap <silent> <SPACE>c q:a!git fetch --all && git create-work-branch ""<LEFT>
 nnoremap <SPACE>p :!git pub
 nnoremap <SPACE>u :!git up
+nnoremap <SPACE>m :!git merge origin/master
 nnoremap <SPACE>x :!git fetch --all --prune && git purge && git wipe-widow-branch
 nnoremap <SPACE>g :!git grep ""<LEFT>
 nnoremap <SPACE>G :!git grep "" \| sed "s/:.*//" \| uniq \| xargs /bin/echo<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
