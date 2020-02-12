@@ -2,4 +2,4 @@ languages:
   markdown:
     lint-command: 'npx textlint --format unix ${INPUT}'
     lint-formats:
-      - '%f:%l:%n: %m'
+      - '%f:%l:%c: %m'
