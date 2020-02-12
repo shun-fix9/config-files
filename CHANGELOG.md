@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version : 0.39.0
+
+- fix: efm-langserver setting : See merge request shun-fix9-base/labo/config-files!78
+- add: vi shortcut : See merge request shun-fix9-base/labo/config-files!77
+
+
 ## Version : 0.38.0
 
 - fix: config : See merge request shun-fix9-base/labo/config-files!75
