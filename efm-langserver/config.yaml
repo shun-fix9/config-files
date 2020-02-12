@@ -1,5 +1,7 @@
 languages:
   markdown:
-    lint-command: 'npx textlint --format unix ${INPUT}'
+    lint-command: 'textlint --format unix --stdin --stdin-filename ${INPUT} | sed "s/^<markdown>/<text>/"'
+    lint-stdin: true
+    lint-ignore-exit-code: true
     lint-formats:
       - '%f:%l:%c: %m'
