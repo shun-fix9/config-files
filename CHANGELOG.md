@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Version : 0.40.0
+
+- fix: shortcut : See merge request shun-fix9-base/labo/config-files!82
+- fix: shortcut : See merge request shun-fix9-base/labo/config-files!81
+- fix: config : See merge request shun-fix9-base/labo/config-files!80
+
+
 ## Version : 0.39.0
 
 - fix: efm-langserver setting : See merge request shun-fix9-base/labo/config-files!78
