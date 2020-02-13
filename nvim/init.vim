@@ -89,9 +89,11 @@ nnoremap <silent> <SPACE>w :bd!<CR>
 nnoremap <silent> <SPACE>v :terminal git status-verbose<CR>
 nnoremap <silent> <SPACE>d :terminal git diff<CR>
 nnoremap <silent> <SPACE>D :terminal git diff --cached<CR>
-nnoremap <silent> <SPACE>a :!git add %<CR><CR>:terminal git status-verbose<CR>a
-nnoremap <silent> <SPACE>A :!git add -A<CR><CR>:terminal git status-verbose<CR>a
+nnoremap <silent> <SPACE>a :!git add %<CR><CR>:terminal git status-verbose<CR>
+nnoremap <silent> <SPACE>A :!git add -A<CR><CR>:terminal git status-verbose<CR>
 nnoremap <silent> <SPACE>c q:a!git fetch --all && git create-work-branch ""<LEFT>
+nnoremap <silent> <SPACE>e :terminal git br --format="\%(refname)" \| sed "s/^refs\\/heads\\///" \| fzf \| xargs git co<CR>a
+nnoremap <silent> <SPACE>E :terminal git br -r --list "origin/*" --format="\%(refname)" \| sed "s/^refs\\/remotes\\/origin\\///" \| grep -v HEAD \| fzf \| xargs git co<CR>a
 nnoremap <SPACE>p :!git pub
 nnoremap <SPACE>u :!git up
 nnoremap <SPACE>m :!git merge origin/master
