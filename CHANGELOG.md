@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version : 0.41.0
+
+- fix: config : See merge request shun-fix9-base/labo/config-files!85
+
+
+
 ## Version : 0.40.0
 
 - fix: shortcut : See merge request shun-fix9-base/labo/config-files!82
