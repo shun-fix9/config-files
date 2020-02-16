@@ -1,0 +1,33 @@
+##### Sample Yashrc #####
+# This is a sample initialization script for yash. Copy this file to ~/.yashrc
+# and add your favorite customization to it.
+
+set --le-always-rp
+
+# Firstly, load the common customization script.
+# If you don't like settings applied in this script, remove this line.
+. --autoload --no-alias initialization/common
+
+bindkey --emacs '\^G' accept-prediction
+bindkey --emacs '\^F' forward-semiword
+
+# These are additional aliases that are not defined in the common script.
+# Uncomment to enable them.
+alias la="ls -al"
+alias s="git status-verbose"
+
+# And add your own customization below.
+
+export TERM=xterm-256color
+export EDITOR=vi
+export LESSCHARSET=utf-8
+
+export PATH=$HOME/bin:$PATH
+
+export GOBIN=$HOME/.go/bin
+export GOPATH=$HOME/.go
+
+. ~/.config/yash/load_env.sh
+. ~/.config/yash/load_plugin.sh
+. ~/.config/yash/direnv_hook.sh
+. ~/.config/yash/prompt.sh
