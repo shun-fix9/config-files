@@ -21,6 +21,7 @@ alias s="git status-verbose"
 export TERM=xterm-256color
 export EDITOR=vi
 export LESSCHARSET=utf-8
+export GO111MODULE=on
 
 export PATH=$HOME/bin:$PATH
 
