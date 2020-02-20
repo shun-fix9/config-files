@@ -13,6 +13,7 @@ bindkey --emacs '\^F' forward-semiword
 
 # These are additional aliases that are not defined in the common script.
 # Uncomment to enable them.
+alias vi="nvim"
 alias la="ls -al"
 alias s="git status-verbose"
 

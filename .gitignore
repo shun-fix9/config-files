@@ -3,7 +3,6 @@
 /configstore/
 
 /nvim/.cache/
-/nvim/repos/
 /nvim/.netrwhist
 /nvim/cache_nvim
 /nvim/state_nvim.vim
