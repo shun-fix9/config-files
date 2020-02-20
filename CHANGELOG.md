@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.43.0
+
+- fix: config : See merge request shun-fix9-base/labo/config-files!89
+
+
 ## Version : 0.42.0
 
 - fix: GO module env var : See merge request shun-fix9-base/labo/config-files!87
