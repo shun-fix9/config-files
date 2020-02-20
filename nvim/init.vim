@@ -2,7 +2,7 @@ if &compatible
   set nocompatible
 endif
 
-let s:dein_repo_dir = '/home/shun/.config/nvim/repos/github.com/Shougo/dein.vim'
+let s:dein_repo_dir = '/home/shun/.cache/dein/repos/github.com/Shougo/dein.vim'
 if !isdirectory(s:dein_repo_dir)
   execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
 endif
@@ -86,11 +86,8 @@ nnoremap <silent> <SPACE>s :w<CR>
 nnoremap <silent> <SPACE>h :noh<CR>
 nnoremap <silent> <SPACE>w :bd!<CR>
 
-nnoremap <silent> <SPACE>v :terminal git status-verbose<CR>
-nnoremap <silent> <SPACE>d :terminal git diff<CR>
-nnoremap <silent> <SPACE>D :terminal git diff --cached<CR>
-nnoremap <silent> <SPACE>a :!git add %<CR><CR>:terminal git status-verbose<CR>
-nnoremap <silent> <SPACE>A :!git add -A<CR><CR>:terminal git status-verbose<CR>
+nnoremap <silent> <SPACE>a :!git add %<CR><CR>:FzfPreviewGitStatus<CR>
+nnoremap <silent> <SPACE>A :!git add -A<CR><CR>:FzfPreviewGitStatus<CR>
 nnoremap <silent> <SPACE>c q:a!git fetch --all --prune && git create-work-branch ""<LEFT>
 nnoremap <silent> <SPACE>e :terminal git br --format="\%(refname)" \| sed "s/^refs\\/heads\\///" \| fzf \| xargs git co<CR>a
 nnoremap <silent> <SPACE>E :terminal git br -r --list "origin/*" --format="\%(refname)" \| sed "s/^refs\\/remotes\\/origin\\///" \| grep -v HEAD \| fzf \| xargs git co<CR>a
@@ -98,8 +95,6 @@ nnoremap <SPACE>p :!git pub
 nnoremap <SPACE>u :!git up
 nnoremap <SPACE>m :!git merge origin/master
 nnoremap <SPACE>x :!git fetch --all --prune && git purge && git wipe-widow-branch
-nnoremap <SPACE>g :!git grep ""<LEFT>
-nnoremap <SPACE>G :!git grep "" \| sed "s/:.*//" \| uniq \| xargs /bin/echo<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
 
 nnoremap <SPACE><BACKSPACE> :!rm -f ~/.vim/swapfiles/*
 
