@@ -5,11 +5,6 @@ repo = 'Shougo/dein.vim'
 repo = 'Shougo/denite.nvim'
 depends = ['neomru.vim', 'neoyank.vim']
 hook_add = '''
-nnoremap <silent> <SPACE>f :Denite file/rec<CR>
-nnoremap <silent> <SPACE>l :Denite file/rec/git<CR>
-nnoremap <silent> <SPACE>b :Denite buffer<CR>
-nnoremap <silent> <SPACE>z :Denite file_mru<CR>
-
 call denite#custom#var('file/rec', 'command', ['rg', '--files', '--glob', '!.git'])
 
 call denite#custom#var('grep', 'command', ['rg'])
@@ -116,6 +111,7 @@ let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
 
+noremap <F3> :Autoformat<CR>
 au BufWrite * :Autoformat
 '''
 
@@ -125,6 +121,12 @@ repo = 'junegunn/fzf'
 [[plugins]]
 repo = 'yuki-ycino/fzf-preview.vim'
 hook_add = '''
+nnoremap <silent> <SPACE>z :FzfPreviewDirectoryFiles<CR>
+nnoremap <silent> <SPACE>l :FzfPreviewGitFiles<CR>
+nnoremap <silent> <SPACE>b :FzfPreviewBuffers<CR>
+nnoremap <silent> <SPACE>f :FzfPreviewProjectMruFiles<CR>
+nnoremap <silent> <SPACE>F :FzfPreviewMruFiles<CR>
+
 nnoremap <silent> <SPACE>d :FzfPreviewGitStatus<CR>
 nnoremap <SPACE>g :FzfPreviewProjectGrep<SPACE>
 '''

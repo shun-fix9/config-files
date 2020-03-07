@@ -103,4 +103,5 @@ noremap <F6> :set invnumber<CR>
 nnoremap j gj
 nnoremap k gk
 
-imap <C-L> <Esc>
+nnoremap <SPACE>j <C-w>j
+nnoremap <SPACE>k <C-w>k
