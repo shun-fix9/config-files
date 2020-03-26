@@ -90,10 +90,12 @@ nnoremap <silent> <SPACE>a :!git add %<CR><CR>:FzfPreviewGitStatus<CR>
 nnoremap <silent> <SPACE>A :!git add -A<CR><CR>:FzfPreviewGitStatus<CR>
 nnoremap <silent> <SPACE>c q:a!git fetch --all --prune && git create-work-branch ""<LEFT>
 nnoremap <silent> <SPACE>e :terminal git br --format="\%(refname)" \| sed "s/^refs\\/heads\\///" \| fzf \| xargs git co<CR>a
-nnoremap <silent> <SPACE>E :terminal git br -r --list "origin/*" --format="\%(refname)" \| sed "s/^refs\\/remotes\\/origin\\///" \| grep -v HEAD \| fzf \| xargs git co<CR>a
-nnoremap <SPACE>p :!git pub
+nnoremap <silent> <SPACE>E :terminal git br -r --list "origin/*" --list "maint/*" --format="\%(refname)" \| sed "s/^refs\\/remotes\\///" \| grep -v HEAD \| grep -v master \| fzf \| sed "s/^[^\\/]*\\///" \| xargs git co<CR>a
 nnoremap <SPACE>u :!git up
+nnoremap <SPACE>p :!git pub
+nnoremap <SPACE>P :!git post ""<LEFT>
 nnoremap <SPACE>m :!git merge origin/master
+nnoremap <SPACE>o :!git fetch --all --prune
 nnoremap <SPACE>x :!git fetch --all --prune && git purge && git wipe-widow-branch
 
 nnoremap <SPACE><BACKSPACE> :!rm -f ~/.vim/swapfiles/*
