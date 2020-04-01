@@ -86,6 +86,7 @@ nnoremap <silent> <SPACE>s :w<CR>
 nnoremap <silent> <SPACE>h :noh<CR>
 nnoremap <silent> <SPACE>w :bd!<CR>
 
+nnoremap <silent> <SPACE>v :terminal git status-verbose<CR>
 nnoremap <silent> <SPACE>a :!git add %<CR><CR>:FzfPreviewGitStatus<CR>
 nnoremap <silent> <SPACE>A :!git add -A<CR><CR>:FzfPreviewGitStatus<CR>
 nnoremap <silent> <SPACE>c q:a!git fetch --all --prune && git create-work-branch ""<LEFT>
