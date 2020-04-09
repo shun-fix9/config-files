@@ -8,6 +8,8 @@
   co = checkout
   m = checkout master
   br = branch
+  rs = restore
+  sw = switch
   tmp = stash save -u
 
   up = parent-sync
