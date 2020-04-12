@@ -103,6 +103,8 @@ nnoremap <SPACE>x :!git fetch --all --prune && git purge && git wipe-widow-branc
 
 nnoremap <SPACE><BACKSPACE> :!rm -f ~/.vim/swapfiles/*
 
+nnoremap <SPACE>q :qa
+
 noremap <F6> :set invnumber<CR>
 
 nnoremap j gj
