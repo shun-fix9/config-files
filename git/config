@@ -5,11 +5,10 @@
 [alias]
   a = add -A
   ci = commit -v
-  co = checkout
-  m = checkout master
   br = branch
   rs = restore
   sw = switch
+  m = switch master
   tmp = stash save -u
 
   up = parent-sync
