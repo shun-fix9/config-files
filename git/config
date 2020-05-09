@@ -9,7 +9,8 @@
   rs = restore
   sw = switch
   m = switch master
-  tmp = stash save -u
+  tmp = stash push -u
+  save = "!git stash store -m \"save: $(date)\" $(git stash create)"
 
   up = parent-sync
   status-verbose = "!git branch && git status && git stash list"
@@ -26,4 +27,4 @@
 [user]
   useConfigOnly = true
 [credential]
-  helper = store --file=/home/shun/.git-post/credentials
+  helper = store
