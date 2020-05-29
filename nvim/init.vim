@@ -94,6 +94,7 @@ nnoremap <silent> <SPACE>A :!git add -A<CR><CR>:FzfPreviewGitStatus<CR>
 nnoremap <silent> <SPACE>c q:a!git fetch --all --prune && git create-work-branch ""<LEFT>
 nnoremap <silent> <SPACE>e :terminal git br --format="\%(refname)" \| sed "s/^refs\\/heads\\///" \| fzf \| xargs git switch<CR>a
 nnoremap <silent> <SPACE>E :terminal git br -r --list "origin/*" --list "maint/*" --format="\%(refname)" \| sed "s/^refs\\/remotes\\///" \| grep -v HEAD \| grep -v master \| fzf \| sed "s/^[^\\/]*\\///" \| xargs git switch<CR>a
+nnoremap <SPACE>D :terminal git diff
 nnoremap <SPACE>u :!git up
 nnoremap <SPACE>p :!git pub
 nnoremap <SPACE>P :!git post ""<LEFT>

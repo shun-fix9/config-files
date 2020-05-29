@@ -10,7 +10,7 @@
   sw = switch
   m = switch master
   tmp = stash push -u
-  save = "!git stash store -m \"save: $(date)\" $(git stash create)"
+  save = "!git add -A && git stash store -m \"save: $(date)\" $(git stash create) && git reset"
 
   up = parent-sync
   status-verbose = "!git branch && git status && git stash list"
