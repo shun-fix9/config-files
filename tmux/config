@@ -13,9 +13,9 @@ setw -g window-status-current-style bg=red,bright
 
 unbind -a
 
-bind : command-prompt
-bind ? list-keys
-bind Escape copy-mode
-bind BSpace detach-client
-bind j next-window
-bind k previous-window
+bind -n M-i command-prompt
+bind -n M-h list-keys
+bind -n M-p copy-mode
+bind -n M-u detach-client
+bind -n M-j next-window
+bind -n M-k previous-window
