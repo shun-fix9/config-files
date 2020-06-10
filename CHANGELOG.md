@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.53.0
+
+- fix: tmux config : See merge request shun-fix9-base/labo/config-files!109
+
+
 ## Version : 0.52.0
 
 - fix: shortcut : See merge request shun-fix9-base/labo/config-files!107
