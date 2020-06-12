@@ -15,7 +15,7 @@
     "efm": {
       "command": "efm-langserver",
       "args": [],
-      "filetypes": ["markdown"]
+      "filetypes": ["markdown", "css"]
     },
     "rust": {
       "command": "rustup",
@@ -30,6 +30,5 @@
         "usePlaceholders": true
       }
     }
-  },
-  "coc.preferences.codeLens.enable": true
+  }
 }

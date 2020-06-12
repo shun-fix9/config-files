@@ -3,3 +3,7 @@ languages:
     lint-command: 'textlint --format unix ${INPUT}'
     lint-formats:
       - '%f:%l:%c: %m'
+  css:
+    lint-command: 'npx stylelint --formatter unix ${INPUT}'
+    lint-formats:
+      - '%f:%l:%c: %m'
