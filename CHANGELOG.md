@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.54.0
+
+- add: css lint setting : See merge request shun-fix9-base/labo/config-files!111
+
+
 ## Version : 0.53.0
 
 - fix: tmux config : See merge request shun-fix9-base/labo/config-files!109
