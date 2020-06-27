@@ -7,6 +7,10 @@ repo = 'raichoo/purescript-vim'
 on_ft = ['purescript']
 
 [[plugins]]
+repo = 'jonsmithers/vim-html-template-literals'
+on_ft = ['typescript']
+
+[[plugins]]
 repo = 'elixir-lang/vim-elixir'
 on_ft = ['elixir']
 
