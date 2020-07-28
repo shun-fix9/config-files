@@ -1,0 +1,2 @@
+#!/bin/sh
+git ls-files | xargs stat --format='%Y %n' | sort --reverse | sed 's/[0-9]* //'

@@ -104,8 +104,9 @@ nnoremap <SPACE>m :!git merge origin/$(git parent)
 nnoremap <SPACE>o :!git fetch --all --prune
 nnoremap <SPACE>x :!git check-full-merged-into-parent-branch && git switch-parent-branch && git wipe-deleted-branch
 
-nnoremap <silent> <SPACE>l :Denite file/rec<CR>
-nnoremap <silent> <SPACE>f :Denite file_mru<CR>
+nnoremap <silent> <SPACE>l :Denite file/rec/git<CR>
+nnoremap <silent> <SPACE>f :Denite file/rec<CR>
+nnoremap <silent> <SPACE>F :Denite file_mru<CR>
 nnoremap <silent> <SPACE>b :Denite buffer<CR>
 nnoremap <silent> <SPACE>v :Denite gitstatus<CR>
 
