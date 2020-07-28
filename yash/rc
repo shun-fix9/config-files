@@ -19,7 +19,6 @@ alias s="git status-verbose"
 
 # And add your own customization below.
 
-export TERM=xterm-256color
 export EDITOR=vi
 export LESSCHARSET=utf-8
 export GO111MODULE=on
@@ -28,6 +27,10 @@ export PATH=$HOME/bin:$PATH
 
 export GOBIN=$HOME/.go/bin
 export GOPATH=$HOME/.go
+
+export ELM_ROOT=$HOME/.bin/elm
+
+export GITLAB_ACCESS_TOKEN=$(cat ~/.git-post/gitlab)
 
 . ~/.config/yash/load_env.sh
 . ~/.config/yash/load_plugin.sh

@@ -88,19 +88,26 @@ nnoremap <silent> <SPACE>w :bd!<CR>
 nnoremap <silent> <SPACE>. :n<CR>
 nnoremap <silent> <SPACE>, :N<CR>
 
-nnoremap <silent> <SPACE>v :terminal git status-verbose<CR>
-nnoremap <silent> <SPACE>a :!git add %<CR><CR>:FzfPreviewGitStatus<CR>
-nnoremap <silent> <SPACE>A :!git add -A<CR><CR>:FzfPreviewGitStatus<CR>
-nnoremap <silent> <SPACE>c q:a!git fetch --all --prune && git create-work-branch ""<LEFT>
-nnoremap <silent> <SPACE>e :terminal git br --format="\%(refname)" \| sed "s/^refs\\/heads\\///" \| fzf \| xargs git switch<CR>a
-nnoremap <silent> <SPACE>E :terminal git br -r --list "origin/*" --list "maint/*" --format="\%(refname)" \| sed "s/^refs\\/remotes\\///" \| grep -v HEAD \| grep -v master \| fzf \| sed "s/^[^\\/]*\\///" \| xargs git switch<CR>a
-nnoremap <SPACE>D :terminal git diff
+nnoremap <silent> <SPACE>V :terminal git status-verbose<CR>
+nnoremap <silent> <SPACE>d :terminal git diff %<CR>
+nnoremap <silent> <SPACE>D :terminal git diff --cached %<CR>
+nnoremap <silent> <SPACE>a :!git add %<CR><CR>:terminal git status-verbose<CR>
+nnoremap <silent> <SPACE>A :!git add -A<CR><CR>:terminal git status-verbose<CR>
+nnoremap <silent> <SPACE>c q:a!git request-to-parent ""<LEFT>
+nnoremap <silent> <SPACE>e :terminal git branch --format="\%(refname)" \| sed "s/^refs\\/heads\\///" \| fzf \| xargs git switch<CR>a
+nnoremap <silent> <SPACE>E :terminal git branch -r --list "origin/*" --list "maint/*" --format="\%(refname)" \| fzf \| xargs git switch --detach<CR>a
 nnoremap <SPACE>u :!git up
 nnoremap <SPACE>p :!git pub
 nnoremap <SPACE>P :!git post ""<LEFT>
-nnoremap <SPACE>m :!git merge origin/master
+nnoremap <SPACE>r :!git reset
+nnoremap <SPACE>m :!git merge origin/$(git parent)
 nnoremap <SPACE>o :!git fetch --all --prune
-nnoremap <SPACE>x :!git fetch --all --prune && git purge && git wipe-widow-branch
+nnoremap <SPACE>x :!git check-full-merged-into-parent-branch && git switch-parent-branch && git wipe-deleted-branch
+
+nnoremap <silent> <SPACE>l :Denite file/rec<CR>
+nnoremap <silent> <SPACE>f :Denite file_mru<CR>
+nnoremap <silent> <SPACE>b :Denite buffer<CR>
+nnoremap <silent> <SPACE>v :Denite gitstatus<CR>
 
 nnoremap <SPACE><BACKSPACE> :!rm -f ~/.vim/swapfiles/*
 
