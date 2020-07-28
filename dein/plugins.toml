@@ -42,6 +42,9 @@ repo = 'Shougo/neomru.vim'
 repo = 'Shougo/neoyank.vim'
 
 [[plugins]]
+repo = 'chemzqm/denite-git'
+
+[[plugins]]
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
@@ -97,9 +100,6 @@ function! s:show_documentation()
   endif
 endfunction
 
-nmap <silent> <space>F <Plug>(coc-format)
-nmap <space>R <Plug>(coc-rename)
-
 nmap <silent> <F8> <Plug>(coc-diagnostic-next)
 nmap <silent> <F7> <Plug>(coc-diagnostic-prev)
 
@@ -115,19 +115,4 @@ let g:autoformat_remove_trailing_spaces = 0
 
 noremap <F3> :Autoformat<CR>
 au BufWrite * :Autoformat
-'''
-
-[[plugins]]
-repo = 'junegunn/fzf'
-
-[[plugins]]
-repo = 'yuki-ycino/fzf-preview.vim'
-hook_add = '''
-nnoremap <silent> <SPACE>z :FzfPreviewDirectoryFiles<CR>
-nnoremap <silent> <SPACE>l :FzfPreviewGitFiles<CR>
-nnoremap <silent> <SPACE>f :FzfPreviewProjectMruFiles<CR>
-nnoremap <silent> <SPACE>F :FzfPreviewMruFiles<CR>
-
-nnoremap <silent> <SPACE>d :FzfPreviewGitStatus<CR>
-nnoremap <SPACE>g :FzfPreviewProjectGrep<SPACE>
 '''
