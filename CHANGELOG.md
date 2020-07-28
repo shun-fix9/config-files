@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## Version : 0.55.0
+
+- fix: message : See merge request shun-fix9-base/labo/config-files!118
+- fix: gitlab ci : See merge request shun-fix9-base/labo/config-files!117
+- fix: config : See merge request shun-fix9-base/labo/config-files!116
+- fix: config : See merge request shun-fix9-base/labo/config-files!115
+- fix: config : See merge request shun-fix9-base/labo/config-files!114
+- add: js-html-template-literals : See merge request shun-fix9-base/labo/config-files!113
+
+
 ## Version : 0.54.0
 
 - add: css lint setting : See merge request shun-fix9-base/labo/config-files!111
