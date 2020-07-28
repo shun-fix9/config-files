@@ -39,6 +39,8 @@ release:
       - triggers
       - schedules
 
+  image: buildpack-deps:buster-scm
+
   script:
     - curl $TRELLIS_CI_BUMP_VERSION/push_tags.sh | sh
 
