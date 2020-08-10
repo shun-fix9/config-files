@@ -100,6 +100,7 @@ nnoremap <SPACE>u :!git up
 nnoremap <SPACE>p :!git pub
 nnoremap <SPACE>P :!git post ""<LEFT>
 nnoremap <SPACE>r :!git reset
+nnoremap <SPACE>g :!git grep ""<LEFT>
 nnoremap <SPACE>m :!git merge origin/$(git parent)
 nnoremap <SPACE>o :!git fetch --all --prune
 nnoremap <SPACE>x :!git check-full-merged-into-parent-branch && git switch-parent-branch && git wipe-deleted-branch
