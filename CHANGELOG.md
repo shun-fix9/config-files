@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.57.0
+
+- fix: elm format setting : See merge request shun-fix9-base/labo/config-files!123
+
+
 ## Version : 0.56.0
 
 - fix: config : See merge request shun-fix9-base/labo/config-files!121
