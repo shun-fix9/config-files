@@ -116,9 +116,6 @@ let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
 
-let g:formatdef_formatter_elm = '"node_modules/.bin/elm-format --stdin"'
-let g:formatters_elm = ['formatter_elm']
-
 noremap <F3> :Autoformat<CR>
 au BufWrite * :Autoformat
 '''

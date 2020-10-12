@@ -8,7 +8,7 @@
   br = branch
   rs = restore
   sw = switch
-  m = "!git fetch --prune origin && git switch-parent-branch"
+  m = "!git fetch --prune origin && git switch --detach refs/remotes/origin/HEAD"
   tmp = stash push -u
   save = "!git add -A && git stash store -m \"save: $(date)\" $(git stash create) && git reset"
 

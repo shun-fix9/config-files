@@ -95,10 +95,10 @@ nnoremap <silent> <SPACE>a :!git add %<CR><CR>:terminal git status-verbose<CR>
 nnoremap <silent> <SPACE>A :!git add -A<CR><CR>:terminal git status-verbose<CR>
 nnoremap <silent> <SPACE>c q:a!git request-to-parent ""<LEFT>
 nnoremap <silent> <SPACE>e :terminal git branch --format="\%(refname)" \| sed "s/^refs\\/heads\\///" \| fzf \| xargs git switch<CR>a
-nnoremap <silent> <SPACE>E :terminal git branch -r --list "origin/*" --list "maint/*" --format="\%(refname)" \| fzf \| xargs git switch --detach<CR>a
+nnoremap <SPACE>E :terminal git branch -r --list "origin/*" --list "maint/*" --format="\%(refname)" \| fzf \| xargs git start-fix ""<LEFT>
 nnoremap <SPACE>u :!git up
 nnoremap <SPACE>p :!git pub
-nnoremap <SPACE>P :!git post ""<LEFT>
+nnoremap <SPACE>P :!git post "" $(git parent)<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
 nnoremap <SPACE>r :!git reset
 nnoremap <SPACE>g :!git grep ""<LEFT>
 nnoremap <SPACE>m :!git merge origin/$(git parent)

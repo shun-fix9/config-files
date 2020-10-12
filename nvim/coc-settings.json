@@ -1,34 +1,23 @@
 {
-  "languageserver": {
-    "elmLS": {
-      "command": "node_modules/.bin/elm-language-server",
-      "args": ["--stdio"],
-      "filetypes": ["elm"],
-      "rootPatterns": ["elm.json"],
-      "initializationOptions": {
-        "runtime": "node",
-        "elmPath": "node_modules/.bin/elm",
-        "elmFormatPath": "node_modules/.bin/elm-format",
-        "elmTestPath": "node_modules/.bin/elm-test"
-      }
+    "languageserver": {
+        "efm": {
+            "command": "efm-langserver",
+            "args": [],
+            "filetypes": ["markdown", "css"]
+        },
+        "rust": {
+            "command": "rustup",
+            "args": ["run", "stable", "rls"],
+            "filetypes": ["rust"]
+        },
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+            "filetypes": ["go"],
+            "initializationOptions": {
+                "usePlaceholders": true
+            }
+        }
     },
-    "efm": {
-      "command": "efm-langserver",
-      "args": [],
-      "filetypes": ["markdown", "css"]
-    },
-    "rust": {
-      "command": "rustup",
-      "args": ["run", "stable", "rls"],
-      "filetypes": ["rust"]
-    },
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"],
-      "initializationOptions": {
-        "usePlaceholders": true
-      }
-    }
-  }
+    "typescript.showUnused": false
 }
