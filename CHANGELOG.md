@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.59.0
+
+- fix: config : See merge request shun-fix9-base/labo/config-files!127
+
+
 ## Version : 0.58.0
 
 - fix: config : See merge request shun-fix9-base/labo/config-files!125
